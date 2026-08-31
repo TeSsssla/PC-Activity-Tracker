@@ -1,0 +1,6 @@
+psutil
+requests
+pywin32
+pycaw
+comtypes
+uiautomation

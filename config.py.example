@@ -1,0 +1,56 @@
+# -*- coding: utf-8 -*-
+"""
+Настройки трекера активности.
+Скопируйте этот файл как config.py и заполните своими данными.
+"""
+from pathlib import Path
+
+# ============================================================
+# Telegram (ОБЯЗАТЕЛЬНО ЗАПОЛНИТЬ!)
+# ============================================================
+TELEGRAM_TOKEN = ""  # Вставьте токен от @BotFather
+TELEGRAM_CHAT_ID = ""  # Ваш chat_id
+
+# ============================================================
+# Тайминги
+# ============================================================
+POLL_INTERVAL = 5
+IDLE_THRESHOLD_SECONDS = 60
+SYSTEM_IDLE_PROCESSES = {"logonui.exe", "lockapp.exe"}
+REPORT_HOUR = 18
+REPORT_MINUTE = 0
+REVIEW_MIN_SECONDS = 60
+REVIEW_MAX_ITEMS = 20
+REVIEW_WAIT_SECONDS = 180
+BROWSER_PROCESSES = {"chrome.exe", "msedge.exe", "firefox.exe", "opera.exe", "browser.exe", "yandex.exe"}
+
+# ============================================================
+# Хранение данных
+# ============================================================
+DATA_DIR = Path.home() / "PCTrack" / "data"
+LOG_FILE = Path.home() / "PCTrack" / "tracker.log"
+LEARNED_FILE = Path.home() / "PCTrack" / "learned.json"
+TG_OFFSET_FILE = Path.home() / "PCTrack" / "tg_offset.txt"
+
+# ============================================================
+# Классификация (НАСТРОЙТЕ ПОД СЕБЯ)
+# ============================================================
+APP_CATEGORIES = {
+    # Работа
+    "excel.exe": "work",
+    "winword.exe": "work",
+    "code.exe": "work",
+    # Отвлечения
+    "telegram.exe": "distraction",
+    "discord.exe": "distraction",
+    # Нейтральное
+    "explorer.exe": "neutral",
+}
+
+TITLE_KEYWORDS = {
+    "youtube": "distraction",
+    "github": "work",
+    "gmail": "neutral",
+}
+
+DEFAULT_CATEGORY = "neutral"
