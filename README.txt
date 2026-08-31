@@ -1,6 +1,3 @@
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![Platform](https://img.shields.io/badge/Platform-Windows-blue)](https://www.microsoft.com/windows)
-
 Track your PC activity, classify work vs distractions, and get daily reports in Telegram.
 
 ## ? Features
