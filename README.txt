@@ -1,21 +1,18 @@
-# PC Activity Tracker ??
-
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/Platform-Windows-blue)](https://www.microsoft.com/windows)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 Track your PC activity, classify work vs distractions, and get daily reports in Telegram.
 
 ## ? Features
 
-- **Automatic tracking** – monitors the active window every 5 seconds
-- **Smart classification** – categorizes apps and websites as `work`, `distraction`, or `neutral`
-- **Per?site tracking in browsers** – treats each website separately (no more lumping all of Chrome together)
-- **Daily Telegram reports** – receive a summary with time breakdowns and a productivity score
-- **Interactive learning** – mark unknown apps/sites via Telegram buttons; the bot remembers your choices
-- **Background audio detection** – sees what’s playing sound (music, video) without affecting main classification
-- **Idle detection** – ignores time without mouse/keyboard input
-- **Privacy?first** – no keylogging, no screenshots, no clipboard access
+- **Automatic tracking** â€“ monitors the active window every 5 seconds
+- **Smart classification** â€“ categorizes apps and websites as `work`, `distraction`, or `neutral`
+- **Per?site tracking in browsers** â€“ treats each website separately (no more lumping all of Chrome together)
+- **Daily Telegram reports** â€“ receive a summary with time breakdowns and a productivity score
+- **Interactive learning** â€“ mark unknown apps/sites via Telegram buttons; the bot remembers your choices
+- **Background audio detection** â€“ sees whatâ€™s playing sound (music, video) without affecting main classification
+- **Idle detection** â€“ ignores time without mouse/keyboard input
+- **Privacy?first** â€“ no keylogging, no screenshots, no clipboard access
 
 ## ?? Quick Start
 
@@ -49,7 +46,7 @@ Track your PC activity, classify work vs distractions, and get daily reports in 
    python tracker.py
    ```
 
-5. **(Optional) Auto?start on boot** – place a shortcut to `run_silent_tg.vbs` in the Windows startup folder (`shell:startup`).
+5. **(Optional) Auto?start on boot** â€“ place a shortcut to `run_silent_tg.vbs` in the Windows startup folder (`shell:startup`).
 
 ## ?? Telegram Setup
 
@@ -75,20 +72,20 @@ Active PC time: 6h 23m (from 7h 45m total)
 ?? Classification coverage: 82%
 
 Top apps/sites:
-?? chrome.exe: github.com — 1h 45m
-?? chrome.exe: youtube.com — 45m
-?? code.exe — 1h 30m
-? explorer.exe — 30m
+?? chrome.exe: github.com â€” 1h 45m
+?? chrome.exe: youtube.com â€” 45m
+?? code.exe â€” 1h 30m
+? explorer.exe â€” 30m
 
 ?? Background audio:
-?? spotify.exe — 1h 20m
+?? spotify.exe â€” 1h 20m
 ```
 
 ## ?? Customisation
 
-- **Add new apps** – find the process name in Task Manager > Details tab, then add it to `APP_CATEGORIES` in `config.py`.
-- **Add website rules** – extend the `TITLE_KEYWORDS` dictionary in `config.py` (e.g., `"jira": "work"`).
-- **Change categories** – modify the `CATEGORIES` tuple in `tracker.py` (requires code changes).
+- **Add new apps** â€“ find the process name in Task Manager > Details tab, then add it to `APP_CATEGORIES` in `config.py`.
+- **Add website rules** â€“ extend the `TITLE_KEYWORDS` dictionary in `config.py` (e.g., `"jira": "work"`).
+- **Change categories** â€“ modify the `CATEGORIES` tuple in `tracker.py` (requires code changes).
 
 ## ?? Privacy
 
@@ -102,15 +99,15 @@ It **never** logs:
 - Clipboard contents ?
 - Personal files ?
 
-All data stays local in `%USERPROFILE%/PCTrack/` – the only external communication is the Telegram report you explicitly requested.
+All data stays local in `%USERPROFILE%/PCTrack/` â€“ the only external communication is the Telegram report you explicitly requested.
 
 ## ?? Data Storage
 
 ```
 %USERPROFILE%/PCTrack/
 +-- data/
-¦   +-- 2026-08-31.json   # daily activity data
-¦   L-- ...
+Â¦   +-- 2026-08-31.json   # daily activity data
+Â¦   L-- ...
 +-- learned.json          # your saved classifications
 +-- tracker.log           # debug logs
 L-- tg_offset.txt         # Telegram state (do not touch)
